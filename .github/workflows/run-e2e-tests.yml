@@ -13,8 +13,8 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRESQL_USERNAME: docker
-          POSTGRESQL_PASSWORD: docker
+          POSTGRESQL_USERNAME: example
+          POSTGRESQL_PASSWORD: example
           POSTGRESQL_DATABASE: apisolid
 
     steps:
@@ -30,4 +30,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: testing
-          DATABASE_URL: 'postgresql://docker:docker@localhost:5432/apisolid?schema=public'
+          DATABASE_URL: 'postgresql://example:example@localhost:5432/apisolid?schema=public'
